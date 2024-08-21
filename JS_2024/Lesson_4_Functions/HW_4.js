@@ -36,13 +36,12 @@ const array = [
     {name: 'Kostya', username: 'Skrin_shot', password: 'as1234h2131'},
 ]
 //for of перебирає весь массив
-function foobar() {
+function foobar(arr) {
     for (const item of array) {
         console.log(item);
     }
 }
-
-console.log(foobar())
+console.log(foobar(array));
 
 // #59g0IsA
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент

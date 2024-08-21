@@ -11,8 +11,8 @@ for (let i = 0; i < 10; i++) {
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 let index = 0;
 
-while (index < 20){
-        document.write('<h1>Це блок № ' + index + ' c довільним текстом всередині</h1>')
+while (index < 20) {
+    document.write('<h1>Це блок № ' + index + ' c довільним текстом всередині</h1>')
     index++;
 }
 
@@ -20,7 +20,7 @@ while (index < 20){
 
 let i = 0;
 
-while (i < 20){
+while (i < 20) {
     document.write('<h1>Це блок № ' + i + ' c довільним текстом всередині № ' + i + ' </h1>')
     i++;
 }
@@ -32,25 +32,16 @@ while (i < 20){
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 //
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-document.write('<ul>')
-for (let i = 0; i < listOfItems.length; i++) {
-    document.write('<li> html </li>');
-    document.write('<li> css </li>');
-    document.write('<li> javascript </li>');
-    document.write('<li> mysql </li>');
-    document.write('<li> mongodb </li>');
-    document.write('<li> react </li>');
-    document.write('<li> angular </li>');
-    document.write('<li> node.js </li>');
-    listOfItems++;
+function foobar() {
+    document.write('<ul>')
+    for (const item of listOfItems) {
+        document.write(`<li>${item}</li>`)
+    }
+    document.write('</ul>')
 }
 
+console.log(foobar());
 
-
-
-
-
-document.write('</ul>')
 
 
 // -----------------------------------------------
@@ -59,28 +50,28 @@ document.write('</ul>')
 // побудувати структуру по шаблону
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
 //
-    let products = [
-        {
-            title: 'milk',
-            price: 22,
-            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
-        },
-        {
-            title: 'juice',
-            price: 27,
-            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
-        },
-        {
-            title: 'tomato',
-            price: 47,
-            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
-        },
-        {
-            title: 'tea',
-            price: 15,
-            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
-        },
-    ];
+let products = [
+    {
+        title: 'milk',
+        price: 22,
+        image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    },
+    {
+        title: 'juice',
+        price: 27,
+        image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    },
+    {
+        title: 'tomato',
+        price: 47,
+        image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    },
+    {
+        title: 'tea',
+        price: 15,
+        image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+    },
+];
 
 document.write('<div class="product-list">');
 for (let i = 0; i < products.length; i++) {
@@ -118,23 +109,23 @@ let users1 = [
     {name: 'max', age: 31, status: true}
 ];
 
-    let arrTrue = []
-    let arrFalse = []
+let arrTrue = []
+let arrFalse = []
 
-    let element = 0
-    while (element < users1.length) {
+let element = 0
+while (element < users1.length) {
 
-        let user = users1[element]
+    let user = users1[element]
 //  за допомоги циклу вивести:
 //  - користувачів зі статусом true
-        if (user.status) {
-            arrTrue[arrTrue.length] = user
+    if (user.status) {
+        arrTrue[arrTrue.length] = user
 //  - користувачів зі статусом false
-        } else {
-            arrFalse[arrFalse.length] = user
-        }
-        element++;
+    } else {
+        arrFalse[arrFalse.length] = user
     }
+    element++;
+}
 //  - користувачів які старші за 30 років
 for (let i = 0; i < users1.length; i++) {
     if (users1[i].age > 30) {
